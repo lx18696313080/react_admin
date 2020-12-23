@@ -2,9 +2,15 @@
 应用的根组件
  */
 import React,{Component} from 'react'
+import { Button,message } from 'antd';
 
 export default class App extends Component{
+
+     handleClick=()=>{
+         message.success("成功")
+    }
+
    render() {
-       return <div>App3</div>
+       return  <Button type="primary" onClick={this.handleClick}>Primary Button</Button>
    }
 }
